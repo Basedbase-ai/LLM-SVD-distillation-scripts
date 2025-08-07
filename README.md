@@ -1,6 +1,10 @@
 # MoE-SVD-Distill
 A multi-GPU Python script for distilling knowledge from a large "teacher" Large Language Model into a smaller "student" LLM.
+## System Requirements
+**Note:** This is a resource-intensive script that requires alot of RAM and VRAM. Please review these requirements before proceeding.
 
+*   **GPU Distillation**: The primary multi-GPU script requires a significant amount of VRAM. It has been tested and confirmed to work on systems with **48GB of VRAM**.
+*   **CPU-based Distillation**: If adapting this workflow for a CPU-only environment, a minimum of **64GB of system RAM** is required. To prevent crashes during memory peaks, a **swap file of 200GB or larger** is also strongly recommended.
 ## Features
 - **Multi-GPU Support**: Utilizes PyTorch's multiprocessing to significantly speed up the distillation process by distributing the workload across multiple GPUs.
 - **SVD-based Distillation**: Employs Singular Value Decomposition (SVD) to project the teacher model's weights into the student's smaller parameter space, preserving maximal information.
