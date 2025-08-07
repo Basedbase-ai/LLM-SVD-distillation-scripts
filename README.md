@@ -1,5 +1,6 @@
 # MoE-SVD-Distill
 A multi-GPU Python script for distilling knowledge from a large "teacher" Large Language Model into a smaller "student" LLM.
+**Note:** The scripts have some "gemini-isms" in them so they might have some goofy lines in them like "BARE METAL FP32" for whatever reason.
 ## System Requirements
 **Note:** This is a resource-intensive script that requires alot of RAM and VRAM. Please review these requirements before proceeding.
 
