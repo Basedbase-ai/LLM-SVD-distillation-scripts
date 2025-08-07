@@ -1,0 +1,4 @@
+numpy
+safetensors
+scikit-learn
+tqdm
