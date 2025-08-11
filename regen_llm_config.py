@@ -3,9 +3,9 @@ import json
 import re
 from safetensors.torch import load_file
 
-# --- CONFIGURE THIS ---
-LORA_FILE_PATH = "/media/workstation/crucial/distilled_qwen3_ULTIMATE_v2.safetensors"
-OUTPUT_CONFIG_PATH = "/media/workstation/crucial/adapter_config_ULTIMATE_v2_FIXED.json"
+# --- CONFIGURE THIS --- --- Change to where your files are stored --- #
+LORA_FILE_PATH = "/media/workstation/crucial/distilled_qwen3_v2.safetensors"
+OUTPUT_CONFIG_PATH = "/media/workstation/crucial/adapter_config_v2_FIXED.json"
 BASE_MODEL_PATH = "/home/workstation/Desktop/qwen30b"
 LORA_RANK = 2048
 LORA_ALPHA = 2048
