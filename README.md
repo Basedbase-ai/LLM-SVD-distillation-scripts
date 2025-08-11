@@ -4,6 +4,7 @@ A multi-GPU Python script for distilling knowledge from a large "teacher" Large 
 **Note:** The scripts have some "gemini-isms" in them so they might have some goofy lines in them like "BARE METAL FP32" for whatever reason.
 ## System Requirements
 **Note:** This is a resource-intensive script that requires alot of RAM and VRAM. Please review these requirements before proceeding.
+**Make sure** you change the output and input file locations in the script so it knows where your files are.
 
 *   **GPU Distillation**: The primary multi-GPU script requires a significant amount of VRAM. It has been tested and confirmed to work on systems with **48GB of VRAM**.
 *   **CPU-based Distillation**: If adapting this workflow for a CPU-only environment, a minimum of **64GB of system RAM** is required. To prevent crashes during memory peaks, a **swap file of 200GB or larger** is also strongly recommended.
