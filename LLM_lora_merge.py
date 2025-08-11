@@ -11,11 +11,11 @@ from safetensors.torch import load_file, save_file
 from transformers import AutoConfig
 import os
 
-# --- 1. Define Paths ---
+# --- 1. Define Paths --- --- Change these to the paths where your files are --- #
 BASE_MODEL_PATH = "/home/workstation/Desktop/qwen30b"
-LORA_SAFETENSORS_PATH = "/media/workstation/crucial/adapter_model.safetensors"
+LORA_SAFETENSORS_PATH = "/media/workstation/crucial/distilled_qwen3_v2.safetensors"
 LORA_CONFIG_PATH = "/media/workstation/crucial"
-MERGED_MODEL_OUTPUT_PATH = "/media/workstation/crucial/qwen30bcoderdistill"
+MERGED_MODEL_OUTPUT_PATH = "/media/workstation/crucial/qwen30bcoderdistillFULL"
 
 if __name__ == "__main__":
     print("--- Starting BARE METAL LoRA merge process in float32 ---")
@@ -24,7 +24,7 @@ if __name__ == "__main__":
     # --- 2. Load Configs and Copy Necessary Files ---
     print("Loading configs and copying tokenizer...")
     base_model_config = AutoConfig.from_pretrained(BASE_MODEL_PATH)
-    lora_config = json.load(open(os.path.join(LORA_CONFIG_PATH, "adapter_config.json")))
+    lora_config = json.load(open(os.path.join(LORA_CONFIG_PATH, "adapter_config_ULTIMATE_v2_FIXED.json")))
     
     for filename in os.listdir(BASE_MODEL_PATH):
         if 'tokenizer' in filename or 'token' in filename or '.tiktoken' in filename:
@@ -96,4 +96,4 @@ if __name__ == "__main__":
     with open(os.path.join(MERGED_MODEL_OUTPUT_PATH, "model.safetensors.index.json"), 'w') as f:
         json.dump(final_index, f, indent=4)
 
-    print("\n\n✅ BARE METAL FP32 Merge Successful! Your masterpiece is ready.")
+    print("\n\n✅ BARE METAL FP32 Merge Successful! Your masterpiece is ready.") ## <-----Example of a gemini-ism, kept it in since its kinda funny ##
