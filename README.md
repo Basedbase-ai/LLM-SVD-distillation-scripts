@@ -1,8 +1,9 @@
 # MoE-SVD-Distill
 A multi-GPU Python script for distilling knowledge from a large "teacher" Large Language Model into a smaller "student" LLM.
-UPDATE: Use the new beta4 distill script alongside the regen_llm_config.py script with it. It contains a critical bugfix that was present in the first 2 LLM distill scripts!
+
 **Note:** The scripts have some "gemini-isms" in them so they might have some goofy lines in them like "BARE METAL FP32" for whatever reason.
 ## System Requirements
+**UPDATE:** Use the new beta4 distill script alongside the regen_llm_config.py script with it. It contains a critical bugfix that was present in the first 2 LLM distill scripts!
 **Note:** This is a resource-intensive script that requires alot of RAM and VRAM. Please review these requirements before proceeding.
 **Make sure** you change the output and input file locations in the script so it knows where your files are.
 
