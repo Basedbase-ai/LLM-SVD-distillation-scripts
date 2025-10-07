@@ -3,7 +3,7 @@ A multi-GPU Python script for distilling knowledge from a large "teacher" Large 
 
 **Note:** The scripts have some "gemini-isms" in them so they might have some goofy lines in them like "BARE METAL FP32" for whatever reason.
 ## System Requirements
-**UPDATE:** Use the new moe_distill_gpu_exp_v2-CORRECT_NAMING.py distill script alongside the regen_llm_config.py script with it. It contains a critical bugfix for a bug that was present in the first 2 LLM distill scripts! The new script significantly improves the distilled models quality!
+**UPDATE:** Use the new moe_distill_gpu_exp_v2-CORRECT_NAMING.py distill script. It contains a critical bugfix for a bug that was present in the first 2 LLM distill scripts! The new script significantly improves the distilled models quality!
 **Note:** This is a resource-intensive script that requires alot of RAM and VRAM. Please review these requirements before proceeding.
 **Make sure** you change the output and input file locations in the script so it knows where your files are.
 
@@ -79,7 +79,7 @@ All the necessary configurations are located in the `CONFIGURATION` section of t
 4.  **Manual Cleanup**: After the script completes, the temporary worker files (`temp_lora_weights_*.safetensors`) will remain in the directory. Once you have verified that the final LoRA file has been created successfully, you can manually delete these temporary files.
 
 ## Correcting the `adapter_config.json`
-By default, the main distillation script can fail to generate a correct `adapter_config.json` file. A separate script, `create_lora_config.py`, is provided to fix this issue after the main `.safetensors` file has been created.
+By default, the old distillation scripts can fail to generate a correct `adapter_config.json` file. The new distill script does not have this issue. A separate script, `create_lora_config.py`, is provided to fix this issue after the main `.safetensors` file has been created.
 
 1.  **Configure the fix script**: Open the `create_lora_config.py` script.
 2.  **Match the paths**: Update the configuration variables at the top of the file (`LORA_FILE_PATH`, `STUDENT_BASE_FOLDER`, `OUTPUT_LORA_CONFIG_PATH`, etc.) to match the paths you used in the main distillation script.
