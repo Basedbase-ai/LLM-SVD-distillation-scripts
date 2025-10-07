@@ -3,7 +3,7 @@ A multi-GPU Python script for distilling knowledge from a large "teacher" Large 
 
 **Note:** The scripts have some "gemini-isms" in them so they might have some goofy lines in them like "BARE METAL FP32" for whatever reason.
 ## System Requirements
-**UPDATE:** Use the new beta4 distill script alongside the regen_llm_config.py script with it. It contains a critical bugfix for a bug that was present in the first 2 LLM distill scripts! The new beta 4 script significantly improves the distilled models quality!
+**UPDATE:** Use the new moe_distill_gpu_exp_v2-CORRECT_NAMING.py distill script alongside the regen_llm_config.py script with it. It contains a critical bugfix for a bug that was present in the first 2 LLM distill scripts! The new script significantly improves the distilled models quality!
 **Note:** This is a resource-intensive script that requires alot of RAM and VRAM. Please review these requirements before proceeding.
 **Make sure** you change the output and input file locations in the script so it knows where your files are.
 
